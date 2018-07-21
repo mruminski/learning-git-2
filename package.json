@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:html",
+    "test:html": "globstar nu-html-checker *.html",
+    
+    "watch": "npm run watch:browsersync",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.htm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.24.5",
-    "nu-html-checker": "^0.1.0"
+    "browser-sync": "^2.24.6",
+    "globstar": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "npm-run-all": "^4.1.3",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^4.1.0",
+    "rimraf": "^2.6.2"
   }
 }
